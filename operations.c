@@ -73,7 +73,7 @@ void show_products(product *products, int n) {
 // in cadrul functiei acesteia, doar adminii au permisiunea de a afisa toti
 // utilizatorii
 void show_users(user *users, int n, int current_type) {
-  if (users[current_type].user_type == CUSTOMER) {
+  if (current_type == CUSTOMER) {
     printf("NU AVETI PERMISIUNEA DE A UTILIZA ACEASTA COMANDA!\n");
   } else {
     int i;
@@ -105,7 +105,7 @@ void Exit(user *users, product *products, int n, int *ok, FILE *f, FILE *g) {
 // in stoc
 void add_product(user *users, product *products, int *n, int current_type,
                  int *capacity) {
-  if (users[current_type].user_type == CUSTOMER) {
+  if (current_type == CUSTOMER) {
     printf("NU AVETI PERMISIUNEA DE A UTILIZA ACEASTA COMANDA!\n");
   } else {
     // daca am depasit capacitatea, realocam prin dublarea capacitatii

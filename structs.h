@@ -3,8 +3,7 @@
 #define PRODUCT_NAME_SIZE 30
 #define USER_NAME_SIZE 50
 #define USER_PASSWORD_SIZE 20
-
-enum user_type { ADMIN, CUSTOMER };
+enum user_type { CUSTOMER, ADMIN };
 
 typedef struct {
   char product_name[PRODUCT_NAME_SIZE];
